@@ -3,14 +3,14 @@ class Student
   attr_reader :id
 
   def initialize(name, grade, id=nil)
-    if id == nil
+    # if id == nil
       @id = id
       @name = name
       @grade = grade
-    else
-      sql = "UPDATE students SET name = ?, grade = ? WHERE id = ?;"
-      DB[:conn].execute(sql, name, grade, id)
-    end
+    # else
+    #   sql = "UPDATE students SET name = ?, grade = ? WHERE id = ?;"
+    #   DB[:conn].execute(sql, name, grade, id)
+    # end
   end
 
   def self.create_table
